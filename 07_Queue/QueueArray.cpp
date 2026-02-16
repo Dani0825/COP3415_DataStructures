@@ -42,7 +42,7 @@ void QueueArray<T, size>::print() const{
             }
         }
     }
-    std::cout << " ]/n";
+    std::cout << " ]\n";
 }
 
 template <typename T, int size>
