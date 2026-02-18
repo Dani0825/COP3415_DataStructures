@@ -68,5 +68,15 @@ Node* reverse_list(Node* head){
 }
 
 Node* swap_pairs(Node* head){
+    if (!head || !head->next){
+        return head;
+    }
 
+    Node* nextPair = head->next->next;
+    head->next->next = head;
+    head = head->next;
+    head->next->next = swap_pairs(nextPair);
+
+    return head; 
 }
+
